@@ -13,6 +13,9 @@ def combine_xml_files(file_list, output_file, debug=False):
             tree = ET.parse(file)
             root = tree.getroot()
 
+            # Add the file name as an attribute to the root element
+            root.set("source", os.path.basename(file))
+
             # Append the root element of each file to the combined root
             combined_root.append(root)
         except ET.ParseError as e:
