@@ -37,7 +37,7 @@ This Python script allows you to combine multiple XML files into a single XML fi
 To combine XML files, use the following command:
 
 ```bash
-python combine_xml.py -o output.xml -i file1.xml,file2.xml,file3.xml
+python xml-combiner.py -o output.xml -i file1.xml,file2.xml,file3.xml
 ```
 
 - `-o output.xml`: Specifies the output file where the combined XML will be saved.
@@ -58,7 +58,7 @@ You will be prompted to enter the paths of the XML files one by one. Type `done`
 Enable debug mode to see detailed logs of the script's execution:
 
 ```bash
-python combine_xml.py -o output.xml -i file1.xml,file2.xml -d
+python xml-combiner.py -o output.xml -i file1.xml,file2.xml -d
 ```
 
 - `-d`: Enables debug mode, providing additional output to help trace the script's operations.
@@ -68,13 +68,13 @@ python combine_xml.py -o output.xml -i file1.xml,file2.xml -d
 To combine `file1.xml` and `file2.xml` into a single file named `combined.xml`, you can run:
 
 ```bash
-python combine_xml.py -o C:\path\to\combined.xml -i C:\path\to\file1.xml,C:\path\to\file2.xml
+python xml-combiner.py -o C:\path\to\combined.xml -i C:\path\to\file1.xml,C:\path\to\file2.xml
 ```
 
 If you want to see detailed processing information, add the `-d` flag:
 
 ```bash
-python combine_xml.py -o C:\path\to\combined.xml -i C:\path\to\file1.xml,C:\path\to\file2.xml -d
+python xml-combiner.py -o C:\path\to\combined.xml -i C:\path\to\file1.xml,C:\path\to\file2.xml -d
 ```
 
 ## Troubleshooting
