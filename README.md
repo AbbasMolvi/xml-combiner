@@ -1,87 +1,34 @@
 # xml-combiner
 
-This Python script allows you to combine multiple XML files into a single XML file. It supports flexible input and output options via command-line arguments and includes a debug mode for detailed process tracking.
+This Python script combines all XML files from a specified directory into a single XML file, offering command-line flexibility and a debug mode for in-depth process tracking. With the ability to handle multiple files automatically, this tool is ideal for users who need to merge large sets of XML files efficiently.
 
-## Features
+**Features:**
+- **Directory-Based XML Combination:** Automatically merge all XML files located within a specified directory, organizing the content under a single root element in the output file.
+- **Command-Line Simplicity:** Easily specify the input directory and output file path through command-line arguments, streamlining the file processing workflow.
+- **Debug Mode:** Activate detailed logging to monitor the script's operations step by step, useful for identifying issues during execution.
 
-- **Combine Multiple XML Files**: Merge multiple XML files into one, with all contents nested under a new root element.
-- **Command-Line Flexibility**: Specify input XML files and the output file directly from the command line.
-- **Debug Mode**: Provides detailed output to help trace the script's execution, useful for troubleshooting.
+**Prerequisites:** Ensure Python 3.x is installed on your system before running the script.
 
-## Prerequisites
+**Installation:** Clone the repository to your local machine and navigate to the script's directory:
+`git clone https://github.com/yourusername/xml-combiner.git` 
+`cd xml-combiner`
 
-- Python 3.x installed on your system.
+**Usage:** To combine all XML files from a directory into a single output file, use:
+`python xml-combiner.py -o output.xml -i path_to_xml_folder`
+- `-o output.xml`: Define the path and name of the output XML file.
+- `-i path_to_xml_folder`: Specify the directory containing the XML files you want to combine.
 
-## Installation
+For enhanced tracking of the process, enable debug mode:
+`python xml-combiner.py -o output.xml -i path_to_xml_folder -d`
 
-1. **Clone the Repository**:
+**Example:** Combine all XML files in `C:\path\to\folder` into a file named `combined.xml`:
+`python xml-combiner.py -o C:\path\to\combined.xml -i C:\path\to\folder`
 
-    Clone this repository to your local machine using the following command:
+To see detailed execution logs, add the `-d` flag:
+`python xml-combiner.py -o C:\path\to\combined.xml -i C:\path\to\folder -d`
 
-    ```bash
-    git clone https://github.com/yourusername/xml-combiner.git
-    ```
+**Troubleshooting:**
+- **File Not Found:** Ensure the input directory exists and contains XML files.
+- **Parsing Errors:** Malformed XML files will trigger parsing errors. Use debug mode to pinpoint the issue.
 
-2. **Navigate to the Script Directory**:
-
-    Change to the directory containing the script:
-
-    ```bash
-    cd xml-combiner
-    ```
-
-## Usage
-
-### Basic Command-Line Usage
-
-To combine XML files, use the following command:
-
-```bash
-python xml-combiner.py -o output.xml -i file1.xml,file2.xml,file3.xml
-```
-
-- `-o output.xml`: Specifies the output file where the combined XML will be saved.
-- `-i file1.xml,file2.xml,file3.xml`: A comma-separated list of input XML files to be combined.
-
-### Interactive Mode
-
-If you prefer to enter file paths interactively:
-
-```bash
-python combine_xml.py -o output.xml
-```
-
-You will be prompted to enter the paths of the XML files one by one. Type `done` when you have finished entering all file paths.
-
-### Debug Mode
-
-Enable debug mode to see detailed logs of the script's execution:
-
-```bash
-python xml-combiner.py -o output.xml -i file1.xml,file2.xml -d
-```
-
-- `-d`: Enables debug mode, providing additional output to help trace the script's operations.
-
-## Example
-
-To combine `file1.xml` and `file2.xml` into a single file named `combined.xml`, you can run:
-
-```bash
-python xml-combiner.py -o C:\path\to\combined.xml -i C:\path\to\file1.xml,C:\path\to\file2.xml
-```
-
-If you want to see detailed processing information, add the `-d` flag:
-
-```bash
-python xml-combiner.py -o C:\path\to\combined.xml -i C:\path\to\file1.xml,C:\path\to\file2.xml -d
-```
-
-## Troubleshooting
-
-- **File Not Found**: Ensure all input file paths are correct and accessible.
-- **Parsing Errors**: If an XML file is malformed, the script will report a parsing error. Use debug mode for more details.
-
-## License
-
-This project is licensed under the MIT License.
+**License:** This project is licensed under the MIT License.
